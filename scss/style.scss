@@ -487,5 +487,43 @@
                 padding: 0 170px;
             }
         }
+
+        /* Desc SCSS */
+        .desc {
+            @include flexbox(column);
+            padding: 20px;
+            color: white;
+            width: 100%;
+            gap: 10px;
+
+            .desc__content p {
+                opacity: 60%;
+            }
+            .btn {
+                border: none;
+                background-color: transparent;
+                color: $green-variant;
+                text-decoration: green underline dotted;
+                font-weight: bold;
+                line-height: 10px;
+            }
+
+            @media (min-width: $mobile) {
+                @include flexbox();
+                flex-direction: row-reverse;
+                justify-content: space-around;
+
+                .desc__img {
+                    width: 50%;
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .desc__content {
+                    width: 50%;
+                }
+            }
+        }
     }
 }
