@@ -1,0 +1,39 @@
+$primary-color: #0f1320;
+$secondary-color: #171b29;
+$blue-variant: #2278d4;
+$green-variant: #22a75d;
+$yellow-variant: #ffd100;
+$red-variant: #e20613;
+
+$font: sans-serif;
+
+$mobile: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+$univeral: (
+    margin: 0,
+    padding: 0,
+    box-sizing: border-box
+);
+
+$flexBox: (
+    display: flex,
+    justify-content: space-between,
+    align-items: center
+);
+
+$colors: (
+    "green": $green-variant,
+    "blue": $blue-variant,
+    "yellow": $yellow-variant,
+    "red": $red-variant
+);
+
+@mixin flexbox($direction: row) {
+    @each $property, $value in $flexBox {
+        #{$property}: $value;
+    }
+
+    flex-direction: $direction;
+}

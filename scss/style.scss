@@ -1,0 +1,491 @@
+@use "./variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        background-color: $primary-color;
+        font-family: $font;
+        overflow-x: hidden;
+
+        /* Navbar SCSS */
+        .navbar {
+            @include flexbox();
+            padding: 40px;
+
+            .navbar__combine {
+                @include flexbox();
+                gap: 78px;
+                font-size: 20px;
+            }
+
+            .navbar__logo {
+                @include flexbox();
+                color: white;
+                text-decoration: none;
+                gap: 3px;
+            }
+
+            .navbar__toggle {
+                display: none;
+            }
+
+            .navbar__links {
+                display: flex;
+                list-style: none;
+                gap: 30px;
+                font-size: 14px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+            .navbar__btns {
+                @include flexbox();
+                gap: 30px;
+                .btn {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+                }
+                .btn__border {
+                    border-radius: 52px;
+                    border: 2px solid #22a75d;
+                    padding: 12px 35px;
+                }
+            }
+
+            @media (max-width: $tablet) {
+                @include flexbox();
+                padding: 40px;
+
+                .navbar__combine {
+                    @include flexbox();
+                    gap: 0px;
+                    font-size: 12px;
+                }
+
+                .btn__border {
+                    border-radius: 52px;
+                    border: 2px solid #22a75d;
+                    padding: 12px 25px;
+                }
+            }
+
+            @media (max-width: $mobile) {
+                padding: 40px 20px;
+                .navbar__toggle {
+                    display: block;
+                    background: none;
+                    border: none;
+                }
+
+                .navbar__btns {
+                    display: none;
+                }
+
+                .navbar__links {
+                    display: none;
+                    list-style: none;
+                    gap: 20px;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $mobile) {
+            #nav-toggle:checked ~ .navbar .navbar__links {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 40%;
+                font-size: 20px;
+                text-align: center;
+                background-color: $primary-color;
+                z-index: 2;
+            }
+        }
+
+        /* Hero SCSS */
+        .hero {
+            @include flexbox();
+            padding-left: 0;
+            .hero__image {
+                width: 100%;
+                overflow: hidden;
+                margin-left: 0px;
+                margin-right: 0px;
+
+                .hero__mobile,
+                .hero__desktop {
+                    width: 100%;
+                    display: block;
+                    object-fit: cover;
+                }
+
+                .hero__mobile {
+                    display: none;
+                }
+
+                .hero__desktop {
+                    display: block;
+                }
+            }
+            .hero__content {
+                width: 50%;
+                color: white;
+                padding-left: 10px;
+
+                #hero__blue {
+                    background-image: linear-gradient(#00b4ec, #2b3087);
+                    color: transparent;
+                    background-clip: text;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                #hero__heading {
+                    padding-top: 10px;
+                    padding-bottom: 20px;
+                    font-size: 30px;
+                }
+                #hero__para {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: white !important;
+                    opacity: 60%;
+                    width: 95%;
+                }
+                #hero__btn {
+                    background-color: #22a75d;
+                    border-radius: 52px;
+                    color: white;
+                    padding: 15px 30px;
+                    border: none;
+                    font-weight: 700;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        @media (max-width: $tablet) {
+            .hero {
+                padding-left: 0 !important;
+            }
+        }
+
+        @media (max-width: $mobile) {
+            .hero {
+                @include flexbox(column);
+                padding-left: 0 !important;
+
+                .hero__content {
+                    width: 100%;
+                    #hero__heading {
+                        font-size: 36px;
+                    }
+                }
+                .hero__image {
+                    .hero__mobile {
+                        display: block;
+                    }
+                    .hero__desktop {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: $desktop) {
+            .hero {
+                padding-left: 110px;
+            }
+        }
+
+        /* ForWhom SCSS */
+        .forwhom__cards {
+            position: static;
+            margin: 40px 20px;
+            color: white;
+            background-color: $primary-color;
+            @include flexbox(column);
+            gap: 10px;
+
+            .card__green,
+            .card__blue {
+                position: static;
+                top: auto;
+                right: auto;
+            }
+
+            .card {
+                background-color: $secondary-color;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                border-radius: 25px;
+                gap: 20px;
+
+                .cardImg__green {
+                    background-color: $green-variant;
+                    border-radius: 50%;
+                    padding: 20px;
+                    width: fit-content;
+                }
+
+                .cardImg__blue {
+                    background-color: $blue-variant;
+                    border-radius: 50%;
+                    padding: 20px;
+                    width: fit-content;
+                }
+
+                .underline__forcreator {
+                    text-decoration: underline;
+                    color: $green-variant;
+                }
+
+                .underline__forholder {
+                    text-decoration: underline;
+                    color: $blue-variant;
+                }
+
+                .forwhom__content {
+                    color: white;
+                    opacity: 50%;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                .forwhom__btn {
+                    border: none;
+                    background-color: transparent;
+                    text-decoration: underline;
+                }
+
+                .btn__green {
+                    color: $green-variant;
+                    span {
+                        margin-left: 4px;
+                    }
+                }
+
+                .btn__blue {
+                    color: $blue-variant;
+                    span {
+                        margin-left: 4px;
+                    }
+                }
+            }
+
+            @media (min-width: $desktop) {
+                position: relative;
+                min-height: 520px;
+                padding-bottom: 20px;
+
+                .card__green {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                .card__blue {
+                    position: absolute;
+                    top: 75px;
+                    right: 0;
+                }
+
+                @include flexbox();
+                .card {
+                    width: 43%;
+                }
+            }
+        }
+
+        /* WhatDifferent SCSS */
+        .whatdifferent {
+            display: flex;
+            flex-direction: column;
+
+            .whatdifferent__fig,
+            .whatdifferent__content {
+                width: 100%;
+            }
+
+            .whatdifferent__content {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+                background-color: white;
+                color: black;
+                border-top-right-radius: 170px;
+                padding: 100px 30px;
+
+                .whatdifferent__heading {
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 40px;
+                    letter-spacing: 0%;
+                }
+
+                .whatdifferent__strong {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0%;
+                    opacity: 60%;
+                }
+
+                .whatdifferent__para {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0%;
+                    opacity: 60%;
+                }
+            }
+
+            .whatdifferent__fig {
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+
+            @media (min-width: $desktop) {
+                flex-direction: row;
+
+                .whatdifferent__fig,
+                .whatdifferent__content {
+                    width: 50%;
+                }
+
+                .whatdifferent__fig {
+                    img {
+                        transform: scaleX(-1);
+                        width: 100%;
+                        height: 100%;
+                        object-fit: fill;
+                    }
+                }
+                .whatdifferent__content {
+                    align-items: start;
+                    justify-content: center;
+                    gap: 20px;
+                    background-color: white;
+                    color: black;
+                    border-top-left-radius: 170px;
+                    border-top-right-radius: 0%;
+                    padding: 20px 130px;
+
+                    .whatdifferent__heading {
+                        font-weight: 700;
+                        font-size: 40px;
+                        letter-spacing: 0%;
+                    }
+
+                    .whatdifferent__strong {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: 0%;
+                        opacity: 60%;
+                    }
+
+                    .whatdifferent__para {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: 0%;
+                        opacity: 60%;
+                    }
+                }
+            }
+        }
+
+        /* Journey SCSS */
+        .journey {
+            display: flex;
+            flex-direction: column;
+
+            .journey__point {
+                padding: 70px 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                gap: 20px;
+                font-weight: bold;
+
+                ul {
+                    padding-bottom: 20px;
+                    list-style-type: decimal;
+                    li {
+                        color: white;
+                        opacity: 70%;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 25px;
+                        letter-spacing: 0%;
+                        margin-left: 15px;
+                    }
+                }
+
+                @each $name, $color in $colors {
+                    &--#{$name} {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 11px;
+                    }
+                }
+
+                .bulletpoint {
+                    color: white;
+                    @each $name, $color in $colors {
+                        &--#{$name} {
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $color;
+                            margin-bottom: 4px;
+                        }
+                    }
+                }
+
+                .blob {
+                    width: fit-content;
+                    padding: 20px;
+                    border-radius: 50% 40% 60% 30%;
+                    font-weight: bold;
+
+                    @each $name, $color in $colors {
+                        &--#{$name} {
+                            background-color: $color;
+                        }
+                    }
+                }
+
+                @media (min-width: $desktop) {
+                    width: 25%;
+                }
+            }
+
+            @media (min-width: $desktop) {
+                @include flexbox();
+                justify-content: space-around;
+                padding: 0 170px;
+            }
+        }
+    }
+}
