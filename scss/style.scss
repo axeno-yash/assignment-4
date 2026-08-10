@@ -525,5 +525,90 @@
                 }
             }
         }
+
+        /* HowBuy SCSS */
+        .howbuy {
+            color: white;
+            background-color: $primary-color;
+            padding: 20px 30px;
+
+            h2{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .howbuy__cards {
+                @include flexbox(column);
+                gap: 10px;
+
+                .card {
+                    background-color: $secondary-color;
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    border-radius: 25px;
+                    gap: 20px;
+
+                    .howbuy__sno {
+                        font-size: smaller;
+                        color: white;
+                        opacity: 40%;
+                    }
+
+                    .howbuy__content {
+                        color: white;
+                        font-size: 18px;
+                        font-weight: bold;
+                        line-height: 25px;
+                    }
+                }
+
+                @media (min-width: $desktop) {
+
+                    @include flexbox();
+                    .card {
+                        width: 45%;
+                    }
+                }
+            }
+        }
+
+        /* Footer SCSS */
+        footer {
+            @include flexbox(column);
+            margin: 20px 30px;
+            gap: 25px;
+            color: white;
+            height: 200px;
+
+            .footer__logo {
+                span {
+                    font-size: 40px;
+                    font-weight: bolder;
+                }
+            }
+            .footer__socials {
+                @include flexbox();
+                gap: 5px;
+                .footer__icons {
+                    padding: 15px;
+                    border: 1px solid gray;
+                    border-radius: 50%;
+                }
+            }
+
+            .footer__end {
+                font-weight: bold;
+            }
+
+            @media (min-width: $desktop) {
+                @include flexbox();
+
+                .footer__socials {
+                    @include flexbox();
+                    gap: 15px;
+                }
+            }
+        }
     }
 }

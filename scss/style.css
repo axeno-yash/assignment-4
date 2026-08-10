@@ -566,4 +566,101 @@
   * body .desc .desc__content {
     width: 50%;
   }
+}
+* body {
+  /* HowBuy SCSS */
+}
+* body .howbuy {
+  color: white;
+  background-color: #0f1320;
+  padding: 20px 30px;
+}
+* body .howbuy h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+* body .howbuy .howbuy__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+* body .howbuy .howbuy__cards .card {
+  background-color: #171b29;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 25px;
+  gap: 20px;
+}
+* body .howbuy .howbuy__cards .card .howbuy__sno {
+  font-size: smaller;
+  color: white;
+  opacity: 40%;
+}
+* body .howbuy .howbuy__cards .card .howbuy__content {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 25px;
+}
+@media (min-width: 1024px) {
+  * body .howbuy .howbuy__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  * body .howbuy .howbuy__cards .card {
+    width: 45%;
+  }
+}
+* body {
+  /* Footer SCSS */
+}
+* body footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 30px;
+  gap: 25px;
+  color: white;
+  height: 200px;
+}
+* body footer .footer__logo span {
+  font-size: 40px;
+  font-weight: bolder;
+}
+* body footer .footer__socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+* body footer .footer__socials .footer__icons {
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+* body footer .footer__end {
+  font-weight: bold;
+}
+@media (min-width: 1024px) {
+  * body footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  * body footer .footer__socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
