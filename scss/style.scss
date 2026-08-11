@@ -10,6 +10,16 @@
         font-family: $font;
         overflow-x: hidden;
 
+        .skip-link {
+            position: absolute;
+            top: auto;
+            background: black;
+            color: $blue-variant;
+            padding: 8px 12px;
+            border-radius: 8px;
+            z-index: 3;
+        }
+
         /* Navbar SCSS */
         .navbar {
             @include flexbox();
@@ -164,11 +174,12 @@
                     width: 95%;
                 }
                 #hero__btn {
-                    background-color: #22a75d;
+                    background-color: $green-variant;
                     border-radius: 52px;
                     color: white;
                     padding: 15px 30px;
                     border: none;
+                    font-size: 15px;
                     font-weight: 700;
                     margin-top: 20px;
                 }
@@ -260,7 +271,7 @@
 
                 .forwhom__content {
                     color: white;
-                    opacity: 50%;
+                    opacity: 0.95;
                     font-size: 16px;
                     line-height: 24px;
                 }
@@ -269,6 +280,8 @@
                     border: none;
                     background-color: transparent;
                     text-decoration: underline;
+                    font-weight: bold;
+                    font-size: 15px;
                 }
 
                 .btn__green {
@@ -468,6 +481,7 @@
                     padding: 20px;
                     border-radius: 50% 40% 60% 30%;
                     font-weight: bold;
+                    color: white;
 
                     @each $name, $color in $colors {
                         &--#{$name} {
@@ -532,7 +546,7 @@
             background-color: $primary-color;
             padding: 20px 30px;
 
-            h2{
+            h2 {
                 text-align: center;
                 margin-bottom: 20px;
             }
@@ -550,9 +564,9 @@
                     gap: 20px;
 
                     .howbuy__sno {
-                        font-size: smaller;
+                        font-size: small;
                         color: white;
-                        opacity: 40%;
+                        opacity: 80%;
                     }
 
                     .howbuy__content {

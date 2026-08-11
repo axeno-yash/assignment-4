@@ -9,12 +9,12 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#maincontent">Skip to main content</a>
     <header>
-        <input id="nav-toggle" type="checkbox" hidden>
         <nav class="navbar">
             <div class="navbar__combine">
                 <a href="/" class="navbar__logo">
-                    <img src="./assets/images/logo.png" width="37" alt="logo">
+                    <img src="./assets/images/logo.png" width="37" alt="Tokners logo">
                     <h3>Tokners</h3>
                 </a>
 
@@ -31,20 +31,20 @@
                 <a class="btn btn__border" href="#">Sign up</a>
             </div>
 
-            <label for="nav-toggle" class="navbar__toggle">
-                <img src="./assets/icons/menu-ic.svg" alt="menu-ic">
-            </label>
+            <button class="navbar__toggle" aria-label="Menu">
+                <img src="./assets/icons/menu-ic.svg" alt="">
+            </button>
         </nav>
     </header>
-    <main>
+    <main id="maincontent">
         <section class="hero">
             <article class="hero__content">
                 <small id="hero__blue">
                     At Tokners we are
                 </small>
-                <h2 id="hero__heading">
+                <h1 id="hero__heading">
                     Reimagining social media through the power of the blockchain.
-                </h2>
+                </h1>
                 <p id="hero__para">We are creating social media 3.0 with influencers, celebrities and creators being
                     able to launch
                     their own digital currency by simply creating a profile with media content posted as Non fungible
@@ -52,15 +52,15 @@
                 <button class="btn" id="hero__btn">Learn More</button>
             </article>
             <figure class="hero__image">
-                <img class="hero__mobile" src="./assets/images/heroImg-mobile.png" alt="heroImg-mobile">
-                <img class="hero__desktop" src="./assets/images/heroImg-desktop.png" alt="heroImg-desktop">
+                <img class="hero__mobile" src="./assets/images/heroImg-mobile.png" alt="">
+                <img class="hero__desktop" src="./assets/images/heroImg-desktop.png" alt="">
             </figure>
         </section>
 
         <section class="forwhom__cards">
             <section class="card card__green">
                 <figure class="cardImg__green">
-                    <img src="./assets/icons/crown.svg" alt="crown">
+                    <img src="./assets/icons/crown.svg" alt="crown icon">
                 </figure>
                 <h2>For <span class="underline__forcreator">Creator</span></h2>
                 <p class="forwhom__content">Creators can gain independence through a decentralised digital currency
@@ -72,7 +72,7 @@
             </section>
             <section class="card card__blue">
                 <figure class="cardImg__blue">
-                    <img src="./assets/icons/star.svg" alt="star">
+                    <img src="./assets/icons/star.svg" alt="star icon">
                 </figure>
                 <h2>For <span class="underline__forholder">Holders</span></h2>
                 <p class="forwhom__content">Holding social tokens allows the individual to gain access to benefits
@@ -88,7 +88,7 @@
 
         <section class="whatdifferent">
             <figure class="whatdifferent__fig">
-                <img src="./assets/images/desc-design.png" alt="design1">
+                <img src="./assets/images/desc-design.png" alt="">
             </figure>
             <section class="whatdifferent__content">
                 <h2 class="whatdifferent__heading">What makes us different?</h2>
@@ -218,13 +218,13 @@
 
         <section class="presale">
             <div class="presale__card">
-                <div class="blob blob--green">Q1</div>
+                <div class="blob blob--green"></div>
             </div>
             <div class="presale__card">
-                <div class="blob blob--blue">Q2</div>
+                <div class="blob blob--blue"></div>
             </div>
             <div class="presale__card">
-                <div class="blob blob--yellow">Q3</div>
+                <div class="blob blob--yellow"></div>
             </div>
         </section>
 
@@ -251,28 +251,28 @@
     </main>
     <footer>
         <figure class="footer__logo">
-            <img src="./assets/images/logo.png" alt="logo">
+            <img src="./assets/images/logo.png" alt="Tokners logo">
             <span>Tokners</span>
         </figure>
         <section class="footer__socials">
-            <div class="footer__icons">
-                <img src="./assets/icons/twitter.svg" alt="1">
-            </div>
-            <div class="footer__icons">
-                <img src="./assets/icons/messenger.svg" alt="2">
-            </div>
-            <div class="footer__icons">
-                <img src="./assets/icons/instagram.svg" alt="3">
-            </div>
-            <div class="footer__icons">
-                <img src="./assets/icons/medium.svg" alt="4">
-            </div>
-            <div class="footer__icons">
-                <img src="./assets/icons/github.svg" alt="5">
-            </div>
-            <div class="footer__icons">
-                <img src="./assets/icons/discord.svg" alt="6">
-            </div>
+            <a class="footer__icons" href="#" aria-label="Tokners Twitter">
+                <img src="./assets/icons/twitter.svg" alt="">
+            </a>
+            <a class="footer__icons" href="#" aria-label="Tokners Messenger">
+                <img src="./assets/icons/messenger.svg" alt="">
+            </a>
+            <a class="footer__icons" href="#" aria-label="Tokners Instagram">
+                <img src="./assets/icons/instagram.svg" alt="">
+            </a>
+            <a class="footer__icons" href="#" aria-label="Tokners Medium">
+                <img src="./assets/icons/medium.svg" alt="">
+            </a>
+            <a class="footer__icons" href="#" aria-label="Tokners GitHub">
+                <img src="./assets/icons/github.svg" alt="">
+            </a>
+            <a class="footer__icons" href="#" aria-label="Tokners Discord">
+                <img src="./assets/icons/discord.svg" alt="">
+            </a>
         </section>
         <section class="footer__end">
             © 2021 Tokners. All rights reserved.

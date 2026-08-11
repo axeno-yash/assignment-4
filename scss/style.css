@@ -7,6 +7,17 @@
   background-color: #0f1320;
   font-family: sans-serif;
   overflow-x: hidden;
+}
+* body .skip-link {
+  position: absolute;
+  top: auto;
+  background: black;
+  color: #2278d4;
+  padding: 8px 12px;
+  border-radius: 8px;
+  z-index: 3;
+}
+* body {
   /* Navbar SCSS */
 }
 * body .navbar {
@@ -180,6 +191,7 @@
   color: white;
   padding: 15px 30px;
   border: none;
+  font-size: 15px;
   font-weight: 700;
   margin-top: 20px;
 }
@@ -267,7 +279,7 @@
 }
 * body .forwhom__cards .card .forwhom__content {
   color: white;
-  opacity: 50%;
+  opacity: 0.95;
   font-size: 16px;
   line-height: 24px;
 }
@@ -275,6 +287,8 @@
   border: none;
   background-color: transparent;
   text-decoration: underline;
+  font-weight: bold;
+  font-size: 15px;
 }
 * body .forwhom__cards .card .btn__green {
   color: #22a75d;
@@ -495,6 +509,7 @@
   padding: 20px;
   border-radius: 50% 40% 60% 30%;
   font-weight: bold;
+  color: white;
 }
 * body .journey .journey__point .blob--green {
   background-color: #22a75d;
@@ -596,9 +611,9 @@
   gap: 20px;
 }
 * body .howbuy .howbuy__cards .card .howbuy__sno {
-  font-size: smaller;
+  font-size: small;
   color: white;
-  opacity: 40%;
+  opacity: 80%;
 }
 * body .howbuy .howbuy__cards .card .howbuy__content {
   color: white;
