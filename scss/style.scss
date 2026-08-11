@@ -10,6 +10,10 @@
         font-family: $font;
         overflow-x: hidden;
 
+        button:hover {
+            cursor: pointer;
+        }
+
         .skip-link {
             position: absolute;
             top: auto;
@@ -578,7 +582,6 @@
                 }
 
                 @media (min-width: $desktop) {
-
                     @include flexbox();
                     .card {
                         width: 45%;
