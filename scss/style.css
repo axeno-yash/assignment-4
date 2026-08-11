@@ -188,7 +188,7 @@
 * body .hero .hero__content #hero__btn {
   background-color: #22a75d;
   border-radius: 52px;
-  color: white;
+  color: black;
   padding: 15px 30px;
   border: none;
   font-size: 15px;
@@ -288,7 +288,7 @@
   background-color: transparent;
   text-decoration: underline;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
 }
 * body .forwhom__cards .card .btn__green {
   color: #22a75d;
@@ -500,7 +500,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #e20613;
+  background-color: #ff0011;
   margin-bottom: 4px;
 }
 * body .journey .journey__point .blob {
@@ -509,7 +509,7 @@
   padding: 20px;
   border-radius: 50% 40% 60% 30%;
   font-weight: bold;
-  color: white;
+  color: black;
 }
 * body .journey .journey__point .blob--green {
   background-color: #22a75d;
@@ -521,7 +521,7 @@
   background-color: #ffd100;
 }
 * body .journey .journey__point .blob--red {
-  background-color: #e20613;
+  background-color: #ff0011;
 }
 @media (min-width: 1024px) {
   * body .journey .journey__point {
